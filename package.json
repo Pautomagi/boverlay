@@ -1,0 +1,9 @@
+{
+  "name": "boverlay",
+  "version": "1.0.0",
+  "description": "Simple overlay menu with different animations.",
+  "main": "index.js",
+  "repository": "https://github.com/pautomagi/boverlay.git",
+  "author": "Ulrik Hovstad",
+  "license": "MIT"
+}
