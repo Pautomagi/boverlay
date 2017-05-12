@@ -20,7 +20,6 @@ function boverlay() {
      * Add event listeners for all the triggers available.
      */
     this.init = function() {
-        console.log("inited");
         var triggers = trigger.length;
         for (var i = 0; i < triggers; i++) {
             trigger[i].addEventListener('click', function (event) {
