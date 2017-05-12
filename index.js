@@ -17,6 +17,20 @@ function boverlay() {
         transEndEventName   = transEndEventNames[ Modernizr.prefixed('transition') ];
 
     /**
+     * Add event listeners for all the triggers available.
+     */
+    this.init = function() {
+        console.log("inited");
+        var triggers = trigger.length;
+        for (var i = 0; i < triggers; i++) {
+            trigger[i].addEventListener('click', function (event) {
+                var el = _checkTargetTag(event);
+                toggleOverlay(el.dataset.name);
+            }, false);
+        }
+    };
+
+    /**
      * Toggles an overlay with the given data attribute.
      * It needs a matching overlay container with the id of data-name.
      *
@@ -84,19 +98,4 @@ function boverlay() {
 
         support.transitions = (support.transitions === true) ? overlay.addEventListener(transEndEventName, onEndTransitionFn) : onEndTransitionFn();
     }
-
-    /**
-     * Add event listeners for all the triggers available.
-     */
-    (function addTriggers() {
-        var triggers = trigger.length;
-        for (var i = 0; i < triggers; i++) {
-            trigger[i].addEventListener('click', function (event) {
-                var el = _checkTargetTag(event);
-                toggleOverlay(el.dataset.name);
-            }, false);
-        }
-    })();
 };
-
-
