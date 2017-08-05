@@ -1,9 +1,23 @@
 {
   "name": "boverlay",
-  "version": "1.0.2",
-  "description": "Simple overlay menu with different animations.",
-  "main": "index.js",
+  "version": "1.1.2",
+  "description": "Simple overlay menu with customizable css animations.",
+  "main": "boverlay.js",
   "repository": "https://github.com/pautomagi/boverlay.git",
   "author": "Ulrik Hovstad",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "modernizr": "^3.5.0"
+  }
 }

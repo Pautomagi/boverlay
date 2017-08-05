@@ -1,0 +1,149 @@
+/*
+* Note: The css for this thing is messy... im sorry.
+*/
+
+// Demo styles.
+$white: #fff;
+$black: #111;
+$primary-color: #367;
+body {
+    font-family: arial, sans-serif;
+    font-weight: 300;
+    background: #333;
+}
+// End demo.
+
+.menu li a {
+    color: $white;
+    font-size: 1rem;
+}
+
+.overlay__return {
+    position: absolute;
+    left: 1.25rem;
+    top: 1.25rem;
+    color: #fff;
+    z-index: 999999999;
+    svg {
+        width: 42px;
+        height: 42px;
+        path {
+            transition: all 0.3s linear;
+            fill: $white;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        svg path {
+            fill: $primary-color;
+        }
+    }
+}
+
+// Disables scrollbars on body when overlay is active.
+.overlay-open {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($black, 1);
+    text-align: center;
+}
+
+.overlay__title {
+    color: $white;
+    font-size: 1.25rem;
+    letter-spacing: rem-calc(3);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+
+/* Menu style */
+
+.overlay ul {
+    list-style: none;
+}
+
+.overlay__item {
+    color: $white;
+    transition: all 0.2s linear;
+    font-size: 2rem;
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+    @media screen and (max-height: 568px) and (orientation: landscape) {
+        height: calc(100px / 2);
+    }
+}
+
+.overlay__close {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    color: #fff;
+    z-index: 999999999;
+    svg {
+        width: 32px;
+        height: 32px;
+        path {
+            transition: all 0.3s linear;
+            fill: $white;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        svg path {
+            fill: $primary-color;
+        }
+    }
+}
+
+// Effect used made by codrpos. Create your own or experiment with the others.
+// https://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/
+.overlay-hugeinc {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    z-index: 99999;
+    overflow-y: scroll;
+}
+
+.overlay-hugeinc nav {
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+    opacity: 0.4;
+    -webkit-transform: translateY(-25%) rotateX(35deg);
+    transform: translateY(-25%) rotateX(35deg);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+    -webkit-transform: translateY(25%) rotateX(-35deg);
+    transform: translateY(25%) rotateX(-35deg);
+}

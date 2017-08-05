@@ -5,9 +5,9 @@
  * @see https://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/ for the original.
  */
 function boverlay() {
-    var support             = { transitions : Modernizr.csstransitions },
-        trigger             = document.getElementsByClassName('trigger-overlay'),
-        transEndEventNames  = {
+    var support            = { transitions : Modernizr.csstransitions },
+        trigger            = document.getElementsByClassName('trigger-overlay'),
+        transEndEventNames = {
             'WebkitTransition'  : 'webkitTransitionEnd',
             'MozTransition'     : 'transitionend',
             'OTransition'       : 'oTransitionEnd',
@@ -37,6 +37,7 @@ function boverlay() {
      */
     function toggleOverlay(overlayName) {
         var overlay = document.getElementById(overlayName);
+
         if(overlay.classList.contains('open')) {
             closeOverlay(overlay);
         } else {
