@@ -8,7 +8,7 @@ Pull requests and ideas are much appreciated.
 
 ## Add boverlay to your project.
 
-```
+```html
 <script src="node_modules/boverlay/src/boverlay.min.js"></script>
 <script>
     var boverlay = new boverlay();
@@ -20,7 +20,7 @@ Pull requests and ideas are much appreciated.
 
 `data-name=""` refers to the id of div that also contains the class `overlay`
 
-```
+```html
 <a class="menu-item trigger-overlay" href="#" data-name="overlay-1">Overlay 1</a>
 
 <div class="overlay overlay-hugeinc" id="overlay-1">
