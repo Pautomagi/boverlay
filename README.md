@@ -1,18 +1,22 @@
-# Boverlay
+# Boverlay - get started
+
+Pull requests and ideas are much appreciated.
 
 `yarn add boverlay`
 
-Add boverlay to your project.
+## Add boverlay to your project.
 
 ```
-<script src="node_modules/boverlay/index.js"></script>
+<script src="node_modules/boverlay/src/boverlay.min.js"></script>
 <script>
     var boverlay = new boverlay();
     boverlay.init();
 </script>
 ```
 
-Add menus
+## Add menus
+
+`data-name=""` refers to the id of div that also contains the class `overlay`
 
 ```
 <a class="menu-item trigger-overlay" href="#" data-name="overlay-1">Overlay 1</a>
@@ -34,3 +38,6 @@ Add menus
     </nav>
 </div>
 ```
+
+## Optional: Add the default stylesheet or copy it to your css.
+ `<link rel="stylesheet" href="node_modules/boverlay/dist/boverlay.css">`
