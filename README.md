@@ -2,6 +2,8 @@
 
 Pull requests and ideas are much appreciated.
 
+[Demo on codepen](https://codepen.io/pautomagi/pen/eEBXLP)
+
 `yarn add boverlay`
 
 ## Add boverlay to your project.
