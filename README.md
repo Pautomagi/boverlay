@@ -9,7 +9,7 @@ Pull requests and ideas are much appreciated.
 ## Add boverlay to your project.
 
 ```html
-<script src="node_modules/boverlay/src/boverlay.min.js"></script>
+<script src="node_modules/boverlay/dist/boverlay.js"></script>
 <script>
     var boverlay = new boverlay();
     boverlay.init();

@@ -3,20 +3,9 @@
 */
 
 // Demo styles.
-$white: #fff;
-$black: #111;
-$primary-color: #367;
-body {
-    font-family: arial, sans-serif;
-    font-weight: 300;
-    background: #333;
-}
-// End demo.
-
-.menu li a {
-    color: $white;
-    font-size: 1rem;
-}
+$white: #fff !default;
+$black: #111 !default;
+$primary-color: #367 !default;
 
 .overlay__return {
     position: absolute;
@@ -41,9 +30,6 @@ body {
 }
 
 // Disables scrollbars on body when overlay is active.
-.overlay-open {
-    overflow: hidden;
-}
 
 .overlay {
     position: fixed;
@@ -53,34 +39,31 @@ body {
     left: 0;
     background: rgba($black, 1);
     text-align: center;
-}
-
-.overlay__title {
-    color: $white;
-    font-size: 1.25rem;
-    letter-spacing: rem-calc(3);
-    text-align: center;
-    text-transform: uppercase;
-    margin: 2rem 0;
-}
-
-
-/* Menu style */
-
-.overlay ul {
-    list-style: none;
-}
-
-.overlay__item {
-    color: $white;
-    transition: all 0.2s linear;
-    font-size: 2rem;
-    &:hover,
-    &:focus {
-        color: $primary-color;
+    &-open { overflow: hidden; }
+    &__title {
+        color: $white;
+        font-size: 1.25rem;
+        letter-spacing: rem-calc(3);
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2rem 0;
     }
-    @media screen and (max-height: 568px) and (orientation: landscape) {
-        height: calc(100px / 2);
+    ul {
+       list-style: none;
+       padding: 0;
+    }
+
+    &__item {
+        color: $white;
+        transition: all 0.2s linear;
+        font-size: 2rem;
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+        @media screen and (max-height: 568px) and (orientation: landscape) {
+            height: calc(100px / 2);
+        }
     }
 }
 
@@ -118,32 +101,26 @@ body {
 .overlay-hugeinc.open {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
     z-index: 99999;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .overlay-hugeinc nav {
-    -webkit-perspective: 1200px;
     perspective: 1200px;
 }
 
 .overlay-hugeinc nav ul {
     opacity: 0.4;
-    -webkit-transform: translateY(-25%) rotateX(35deg);
     transform: translateY(-25%) rotateX(35deg);
-    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
     transition: transform 0.5s, opacity 0.5s;
 }
 
 .overlay-hugeinc.open nav ul {
     opacity: 1;
-    -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
 }
 
 .overlay-hugeinc.close nav ul {
-    -webkit-transform: translateY(25%) rotateX(-35deg);
     transform: translateY(25%) rotateX(-35deg);
 }
